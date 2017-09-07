@@ -1,2 +1,664 @@
-<h1>Main#index</h1>
-<p>Find me in app/views/main/index.html.erb</p>
+<!--
+Digital Ocean:
+	07-09-2017
+Latest Integration:
+	31-08-2017
+	23-08-2017
+	05-09-2017
+	================================================= -->
+
+
+
+	<!-- Home Section
+	================================================== -->
+	<section data-role="section" class="center-align" id="home">
+	<div class="container">
+		<div class="logo">
+			<div class="logo__card">
+				<div class="layer">
+					<img src="images/laptop.png" alt="image"/>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s10 offset-s1 page text-center">
+				<div class="item glitch">
+					<h1 class="glitchText">INTERRUPT '17</h1>
+					<h1 class="glitchText">INTERRUPT '17</h1>
+					<h1 class="glitchText">INTERRUPT '17</h1>
+				</div>
+			</div>
+		</div>
+		
+				<!-- Modal Trigger -->
+				
+				<% if !logged_in? %>
+				<div class="row">
+					<div class="col s8 offset-s2 m4 offset-m4 waves-effect waves-light btn">
+					<a class="modal-trigger white-text" href="#signup_signin">Sign Up/Sign In</a>
+					</div>
+				</div>
+				<% else %>
+				<div class="row">
+					<div class="col s8 offset-s2 m4 offset-m4 waves-effect waves-light btn">
+					<a class="modal-trigger white-text" href="#register">Events Registration</a>
+					</div>
+				</div>
+					<% end %>
+				
+		<div class="row">
+			<div class="col s10 offset-s1 page text-center">
+				<p class="center-align">
+					<a href="#about" class="btn-floating btn-large waves-effect waves-light green nav-btn" ><i class="large material-icons">arrow_downward</i></a>
+				</p>
+			</div>
+		</div>
+	</div>
+	</section>
+	<!-- End of Home Section
+	================================================== -->
+
+	<!-- About Section
+	================================================== -->
+	<section data-role="section" id="about">
+		<div class="container">
+			<div class="row">
+				<div class="col s10 offset-s1 page text-center">
+					<h1 class="fromLeft">About Interrupt '17</h1>
+					<p class="fromRight">
+						Quick brown dogs jump over the lazy fox. The jay, pig, fox, zebra, and my wolves quack! Blowzy red vixens fight for a quick jump. Joaquin Phoenix was gazed by MTV for luck. A wizard’s job is to vex chumps quickly in fog. Watch "Jeopardy! ", Alex Trebek"s fun TV quiz game. Woven silk pyjamas exchanged for blue quartz. Brawny gods just flocked up to quiz and vex him. Adjusting quiver and bow, Zompyc[1] killed the fox. My faxed joke won a pager in the cable TV quiz show. Amazingly few discotheques provide jukeboxes. My girl wove six dozen plaid jackets before she quit. Six big devils from Japan quickly forgot how to waltz. Big July earthquakes confound zany experimental vow. Foxy parsons quiz and cajole the lovably dim wiki-girl.
+					</p>
+				</div>
+				<div class="col s10 offset-s1 page text-center">
+					<p class="center-align">
+						<a class="btn-floating btn-large waves-effect waves-light green nav-btn" href="#events"><i class="large material-icons">arrow_downward</i></a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End of About Section
+	================================================== -->
+
+	<!-- Events Section
+	================================================== -->
+	<section data-role="section" id="events">
+		<div class="container">
+			<div class="row">
+				<div class="col s10 offset-s1 page text-center">
+					<h1 class="item">Events</h1>
+				</div>
+				<div class="col s10 offset-s1 page text-center">
+					<div class="row">
+						<div class="col s12 m4 event item">
+							<a class="modal-trigger" href="#event1Modal"><h5>Event 1</h5></a>
+						</div>
+						<div class="col s12 m4 event item">
+							<a class="modal-trigger" href="#event2Modal"><h5>Event 2</h5></a>
+						</div>
+						<div class="col s12 m4 event item">
+							<a class="modal-trigger" href="#event3Modal"><h5>Event 3</h5></a>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s12 m4 event item">
+							<a class="modal-trigger" href="#event4Modal"><h5>Event 4</h5></a>
+						</div>
+						<div class="col s12 m4 event item">
+							<a class="modal-trigger" href="#event5Modal"><h5>Event 5</h5></a>
+						</div>
+						<div class="col s12 m4 event item">
+							<a class="modal-trigger" href="#event6Modal"><h5>Event 6</h5></a>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s12 m4 event item">
+							<a class="modal-trigger" href="#event7Modal"><h5>Event 7</h5></a>
+						</div>
+						<div class="col s12 m4 event item">
+							<a class="modal-trigger" href="#event8Modal"><h5>Event 8</h5></a>
+						</div>
+						<div class="col s12 m4 event item">
+							<a class="modal-trigger" href="#event9Modal"><h5>Event 9</h5></a>
+						</div>
+					</div>
+					<p class="center-align">
+						<a class="btn-floating btn-large waves-effect waves-light green nav-btn" href="#team"><i class="large material-icons">arrow_downward</i></a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End of Events Section
+	================================================== -->
+
+	<!-- Team Section
+	================================================== -->
+	<section data-role="section" id="team">
+		<div class="container">
+			<div class="row">
+				<div class="col s10 offset-s1 page text-center">
+					<h1 class="fromLeft">Team - Interrupt '17</h1>
+					<p class="fromRight">
+						Quick brown dogs jump over the lazy fox. The jay, pig, fox, zebra, and my wolves quack! Blowzy red vixens fight for a quick jump. Joaquin Phoenix was gazed by MTV for luck. A wizard’s job is to vex chumps quickly in fog. Watch "Jeopardy! ", Alex Trebek"s fun TV quiz game. Woven silk pyjamas exchanged for blue quartz. Brawny gods just flocked up to quiz and vex him. Adjusting quiver and bow, Zompyc[1] killed the fox. My faxed joke won a pager in the cable TV quiz show. Amazingly few discotheques provide jukeboxes. My girl wove six dozen plaid jackets before she quit. Six big devils from Japan quickly forgot how to waltz. Big July earthquakes confound zany experimental vow. Foxy parsons quiz and cajole the lovably dim wiki-girl.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End of Team Section
+	================================================== -->
+
+	
+	<!-- Modal Content -->
+	<div id="signup_signin" class="modal modal-fixed">
+	<div class="row">
+		<!--toggle sign up/in-->
+    	<div class="col s12">
+      		<ul class="tabs">
+        	<li class="tab col s6"><a  class="active" href="#signup">Sign Up</a></li>
+        	<li class="tab col s6"><a href="#signin">Sign In</a></li>
+       		</ul>
+    	</div>
+    	<!--end of toggle-->
+    	
+    	<!--start of sign up-->
+    	<div id="signup" class="col s12">
+    	<div class="col s12">
+    	<%= form_for(:user, url: sign_up_create_path) do %>
+    	</div>
+			<div class="black-text modal-content">
+				<div class="row">
+					<div class="col s12 center-align">
+						<h4>SVCE Interrupt '17 - Sign Up</h4>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s12">
+						<i class="material-icons prefix black-text text-darken-2">person</i>
+						<input name="user[name]" id="first_name" type="text" class="validate" data-length="50">
+						<label for="first_name">Name</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s12">
+						<i class="material-icons prefix black-text text-darken-2">school</i>
+						<input name="user[college]" id="college" type="text" class="validate" data-length="50">
+						<label for="college">College Name</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s12 m6">
+						<i class="material-icons prefix black-text text-darken-2">email</i>
+						<input name="user[email]" id="email" type="email" class="validate" data-length="35">
+						<label for="email">Email</label>
+					</div>
+					<div class="input-field col s12 m6">
+						<i class="material-icons prefix black-text text-darken-2">local_phone</i>
+						<input name="user[phone]" id="phone" type="tel" class="validate"  data-length="10">
+						<label for="phone">Phone Number</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s12 m6">
+						<i class="material-icons prefix black-text text-darken-2">lock</i>
+						<input name="user[password]" id="password" type="password" class="validate"  data-length="16">
+						<label for="phone">Password</label>
+					</div>
+					<div class="input-field col s12 m6">
+						<i class="material-icons prefix black-text text-darken-2">lock</i>
+						<input name="user[password_confirmation]" id="password_confirm" type="password" class="validate"  data-length="16">
+						<label for="phone">Confirm Password</label>
+					</div>
+				</div>
+
+				
+
+				
+				<div class="row">
+					<button type="submit"  class="waves-effect waves-light btn blue modal-trigger">
+					Sign Up<i class="material-icons right">send</i>
+					</button>
+				</div>
+			</div>
+		<% end %>
+	</div>
+	<!--end of sign up-->
+
+	<!--Start of sign in-->
+	<div id="signin" class="col s12">
+    	<div class="col s12">
+    	<%= form_tag sign_in_create_path do %>
+    	</div>
+			<div class="black-text modal-content">
+				<div class="row">
+					<div class="col s12 center-align">
+						<h4>SVCE Interrupt '17 - Sign In</h4>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s12">
+						<i class="material-icons prefix black-text text-darken-2">email</i>
+						<input name="user[email]" id="first_name" type="email" class="validate" data-length="20">
+						<label for="E-mail">E-mail</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s12">
+						<i class="material-icons prefix black-text text-darken-2">lock</i>
+						<input name="user[password]" id="last_name" type="password" class="validate" data-length="20">
+						<label for="last_name">Password</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col s12 m6">
+						<input name="user[remember]" type="checkbox" id="remember"/>
+						<label for="remember">Remember Me</label>
+					</div>
+					<div class="col s12 m6">
+						<a href="#">Forgot password ?</a>
+					</div>
+				</div>
+				
+				
+				<div class="row">
+					<div class="input-field col s12">
+						<button type="submit" class="waves-effect waves-light btn blue modal-trigger">Sign In
+							<i class="material-icons right">done</i>
+						</button>
+					</div>
+				</div>
+			</div>
+		<% end %>
+	</div>
+		<!--end of sign in-->
+ 
+  	</div>
+	</div>
+	<!--==========end of sign in/up=========-->
+
+
+	<!--=========start of events registration======-->
+	<div id="register" class="modal">
+		<div class="col s12">
+		<%= form_tag events_reg_path do %>
+		</div>
+			<div class="black-text modal-content">
+				<div class="row">
+					<div class="col s12 center-align">
+						<h4>SVCE Interrupt '17 - Events Registration</h4>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col s12 m4">
+						<p>
+							<input name="event[e1]" type="checkbox" id="event1"/>
+							<label for="event1">Event One</label>
+						</p>
+						<p>
+							<input name="event[e2]" type="checkbox" id="event2"/>
+							<label for="event2">Event Two</label>
+						</p>
+						<p>
+							<input name="event[e3]" type="checkbox" id="event3"/>
+							<label for="event3">Event Three</label>
+						</p>
+					</div>
+					<div class="col s12 m4">
+						<p>
+							<input name="event[e4]" type="checkbox" id="event4"/>
+							<label for="event4">Event Four</label>
+						</p>
+						<p>
+							<input name="event[e5]" type="checkbox" id="event5"/>
+							<label for="event5">Event Five</label>
+						</p>
+						<p>
+							<input name="event[e6]" type="checkbox" id="event6"/>
+							<label for="event6">Event Six</label>
+						</p>
+					</div>
+					<div class="col s12 m4">
+						<p>
+							<input name="event[e7]" type="checkbox" id="event7"/>
+							<label for="event7">Event Seven</label>
+						</p>
+						<p>
+							<input name="event[e8]" type="checkbox" id="event8"/>
+							<label for="event8">Event Eight</label>
+						</p>
+						<p>
+							<input name="event[e9]" type="checkbox" id="event9"/>
+							<label for="event9">Event Nine</label>
+						</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s12">
+						<button type="submit" name="submit_events" class="waves-effect waves-light btn blue modal-trigger">Register
+							<i class="material-icons right">done</i>
+						</button>
+					</div>
+				</div>
+			</div>
+		<% end %>
+	</div>
+	<!--=========end of events registration======-->
+
+
+
+
+
+
+				<div id="popup" class="modal">
+					<div class="black-text modal-content">
+						<h3>Thank you for registering!</h3>
+						<p>A confirmation mail has been sent to you.</p>
+						<p>Please click on the link on the email to confirm your registration.</p>
+    				</div>
+    				<div class="modal-footer">
+						<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Okay</a>
+					</div>
+ 				</div>
+			
+		
+		
+	
+	
+
+
+<!-- Solo Events Section
+	================================================== -->
+<div id="event1Modal" class="modal modal-fixed black-text">
+		<div class="row">
+			<ul class="tabs">
+				<li class="tab col s4"><a href="#aboutEvent1" class="teal-text">About</a></li>
+				<li class="tab col s4"><a href="#rulesEvent1" class="teal-text">Rules</a></li>
+				<li class="tab col s4"><a href="#contactEvent1" class="teal-text">Contact</a></li>
+				<div class="indicator teal" style="z-index:1"></div>
+			</ul>
+		</div>
+		<div id="aboutEvent1" class="col s12 modal-content">
+			  <h5>Event Name</h5>
+			  <p class="text-justify">
+				  Lorem ipsum dolor sit amet, mei quis soluta ut, ius ut autem deleniti. At oratio neglegentur qui, illum maluisset reprimique cum cu. Ius esse nostrum id, no omnis omittam mea. Erant maiorum te qui, qui labore mandamus id. Cum id nisl porro ponderum, vix eu suscipit reformidans, quo melius graecis epicurei ea. Qui eu latine erroribus, te causae conceptam vix.
+			  </p>
+		  </div>
+		<div id="rulesEvent1" class="col s12 modal-content">
+			  <h5>Rules</h5>
+			  <ol class="left-align">
+				  <li>Rule 1</li>
+				  <li>Rule 2</li>
+			  </ol>
+		  </div>
+		<div id="contactEvent1" class="col s12 modal-content">
+			  <h5>Contact</h5>
+			  <p class="left-align">
+				  John Doe: +91 12345 67890
+				  <br />
+				  Jane Doe: +91 12345 67890
+			  </p>
+		  </div>
+	</div>
+	<div id="event2Modal" class="modal modal-fixed black-text">
+		<div class="row">
+			<ul class="tabs">
+				<li class="tab col s4"><a href="#aboutEvent2" class="teal-text">About</a></li>
+				<li class="tab col s4"><a href="#rulesEvent2" class="teal-text">Rules</a></li>
+				<li class="tab col s4"><a href="#contactEvent2" class="teal-text">Contact</a></li>
+				<div class="indicator teal" style="z-index:1"></div>
+			</ul>
+		</div>
+		<div id="aboutEvent2" class="col s12 modal-content">
+			  <h5>Event Name</h5>
+			  <p class="text-justify">
+				  Lorem ipsum dolor sit amet, mei quis soluta ut, ius ut autem deleniti. At oratio neglegentur qui, illum maluisset reprimique cum cu. Ius esse nostrum id, no omnis omittam mea. Erant maiorum te qui, qui labore mandamus id. Cum id nisl porro ponderum, vix eu suscipit reformidans, quo melius graecis epicurei ea. Qui eu latine erroribus, te causae conceptam vix.
+			  </p>
+		  </div>
+		<div id="rulesEvent2" class="col s12 modal-content">
+			  <h5>Rules</h5>
+			  <ol class="left-align">
+				  <li>Rule 1</li>
+				  <li>Rule 2</li>
+			  </ol>
+		  </div>
+		<div id="contactEvent2" class="col s12 modal-content">
+			  <h5>Contact</h5>
+			  <p class="left-align">
+				  John Doe: +91 12345 67890
+				  <br />
+				  Jane Doe: +91 12345 67890
+			  </p>
+		  </div>
+	</div>
+	<div id="event3Modal" class="modal modal-fixed black-text">
+		<div class="row">
+			<ul class="tabs">
+				<li class="tab col s4"><a href="#aboutEvent3" class="teal-text">About</a></li>
+				<li class="tab col s4"><a href="#rulesEvent3" class="teal-text">Rules</a></li>
+				<li class="tab col s4"><a href="#contactEvent3" class="teal-text">Contact</a></li>
+				<div class="indicator teal" style="z-index:1"></div>
+			</ul>
+		</div>
+		<div id="aboutEvent3" class="col s12 modal-content">
+			  <h5>Event Name</h5>
+			  <p class="text-justify">
+				  Lorem ipsum dolor sit amet, mei quis soluta ut, ius ut autem deleniti. At oratio neglegentur qui, illum maluisset reprimique cum cu. Ius esse nostrum id, no omnis omittam mea. Erant maiorum te qui, qui labore mandamus id. Cum id nisl porro ponderum, vix eu suscipit reformidans, quo melius graecis epicurei ea. Qui eu latine erroribus, te causae conceptam vix.
+			  </p>
+		  </div>
+		<div id="rulesEvent3" class="col s12 modal-content">
+			  <h5>Rules</h5>
+			  <ol class="left-align">
+				  <li>Rule 1</li>
+				  <li>Rule 2</li>
+			  </ol>
+		  </div>
+		<div id="contactEvent3" class="col s12 modal-content">
+			  <h5>Contact</h5>
+			  <p class="left-align">
+				  John Doe: +91 12345 67890
+				  <br />
+				  Jane Doe: +91 12345 67890
+			  </p>
+		  </div>
+	</div>
+	<div id="event4Modal" class="modal modal-fixed black-text">
+		<div class="row">
+			<ul class="tabs">
+				<li class="tab col s4"><a href="#aboutEvent4" class="teal-text">About</a></li>
+				<li class="tab col s4"><a href="#rulesEvent4" class="teal-text">Rules</a></li>
+				<li class="tab col s4"><a href="#contactEvent4" class="teal-text">Contact</a></li>
+				<div class="indicator teal" style="z-index:1"></div>
+			</ul>
+		</div>
+		<div id="aboutEvent4" class="col s12 modal-content">
+			  <h5>Event Name</h5>
+			  <p class="text-justify">
+				  Lorem ipsum dolor sit amet, mei quis soluta ut, ius ut autem deleniti. At oratio neglegentur qui, illum maluisset reprimique cum cu. Ius esse nostrum id, no omnis omittam mea. Erant maiorum te qui, qui labore mandamus id. Cum id nisl porro ponderum, vix eu suscipit reformidans, quo melius graecis epicurei ea. Qui eu latine erroribus, te causae conceptam vix.
+			  </p>
+		  </div>
+		<div id="rulesEvent4" class="col s12 modal-content">
+			  <h5>Rules</h5>
+			  <ol class="left-align">
+				  <li>Rule 1</li>
+				  <li>Rule 2</li>
+			  </ol>
+		  </div>
+		<div id="contactEvent4" class="col s12 modal-content">
+			  <h5>Contact</h5>
+			  <p class="left-align">
+				  John Doe: +91 12345 67890
+				  <br />
+				  Jane Doe: +91 12345 67890
+			  </p>
+		  </div>
+	</div>
+	<div id="event5Modal" class="modal modal-fixed black-text">
+		<div class="row">
+			<ul class="tabs">
+				<li class="tab col s4"><a href="#aboutEvent5" class="teal-text">About</a></li>
+				<li class="tab col s4"><a href="#rulesEvent5" class="teal-text">Rules</a></li>
+				<li class="tab col s4"><a href="#contactEvent5" class="teal-text">Contact</a></li>
+				<div class="indicator teal" style="z-index:1"></div>
+			</ul>
+		</div>
+		<div id="aboutEvent5" class="col s12 modal-content">
+			  <h5>Event Name</h5>
+			  <p class="text-justify">
+				  Lorem ipsum dolor sit amet, mei quis soluta ut, ius ut autem deleniti. At oratio neglegentur qui, illum maluisset reprimique cum cu. Ius esse nostrum id, no omnis omittam mea. Erant maiorum te qui, qui labore mandamus id. Cum id nisl porro ponderum, vix eu suscipit reformidans, quo melius graecis epicurei ea. Qui eu latine erroribus, te causae conceptam vix.
+			  </p>
+		  </div>
+		<div id="rulesEvent5" class="col s12 modal-content">
+			  <h5>Rules</h5>
+			  <ol class="left-align">
+				  <li>Rule 1</li>
+				  <li>Rule 2</li>
+			  </ol>
+		  </div>
+		<div id="contactEvent5" class="col s12 modal-content">
+			  <h5>Contact</h5>
+			  <p class="left-align">
+				  John Doe: +91 12345 67890
+				  <br />
+				  Jane Doe: +91 12345 67890
+			  </p>
+		  </div>
+	</div>
+	<div id="event6Modal" class="modal modal-fixed black-text">
+		<div class="row">
+			<ul class="tabs">
+				<li class="tab col s4"><a href="#aboutEvent6" class="teal-text">About</a></li>
+				<li class="tab col s4"><a href="#rulesEvent6" class="teal-text">Rules</a></li>
+				<li class="tab col s4"><a href="#contactEvent6" class="teal-text">Contact</a></li>
+				<div class="indicator teal" style="z-index:1"></div>
+			</ul>
+		</div>
+		<div id="aboutEvent6" class="col s12 modal-content">
+			  <h5>Event Name</h5>
+			  <p class="text-justify">
+				  Lorem ipsum dolor sit amet, mei quis soluta ut, ius ut autem deleniti. At oratio neglegentur qui, illum maluisset reprimique cum cu. Ius esse nostrum id, no omnis omittam mea. Erant maiorum te qui, qui labore mandamus id. Cum id nisl porro ponderum, vix eu suscipit reformidans, quo melius graecis epicurei ea. Qui eu latine erroribus, te causae conceptam vix.
+			  </p>
+		  </div>
+		<div id="rulesEvent6" class="col s12 modal-content">
+			  <h5>Rules</h5>
+			  <ol class="left-align">
+				  <li>Rule 1</li>
+				  <li>Rule 2</li>
+			  </ol>
+		  </div>
+		<div id="contactEvent6" class="col s12 modal-content">
+			  <h5>Contact</h5>
+			  <p class="left-align">
+				  John Doe: +91 12345 67890
+				  <br />
+				  Jane Doe: +91 12345 67890
+			  </p>
+		  </div>
+	</div>
+	<div id="event7Modal" class="modal modal-fixed black-text">
+		<div class="row">
+			<ul class="tabs">
+				<li class="tab col s4"><a href="#aboutEvent7" class="teal-text">About</a></li>
+				<li class="tab col s4"><a href="#rulesEvent7" class="teal-text">Rules</a></li>
+				<li class="tab col s4"><a href="#contactEvent7" class="teal-text">Contact</a></li>
+				<div class="indicator teal" style="z-index:1"></div>
+			</ul>
+		</div>
+		<div id="aboutEvent7" class="col s12 modal-content">
+			  <h5>Event Name</h5>
+			  <p class="text-justify">
+				  Lorem ipsum dolor sit amet, mei quis soluta ut, ius ut autem deleniti. At oratio neglegentur qui, illum maluisset reprimique cum cu. Ius esse nostrum id, no omnis omittam mea. Erant maiorum te qui, qui labore mandamus id. Cum id nisl porro ponderum, vix eu suscipit reformidans, quo melius graecis epicurei ea. Qui eu latine erroribus, te causae conceptam vix.
+			  </p>
+		  </div>
+		<div id="rulesEvent7" class="col s12 modal-content">
+			  <h5>Rules</h5>
+			  <ol class="left-align">
+				  <li>Rule 1</li>
+				  <li>Rule 2</li>
+			  </ol>
+		  </div>
+		<div id="contactEvent7" class="col s12 modal-content">
+			  <h5>Contact</h5>
+			  <p class="left-align">
+				  John Doe: +91 12345 67890
+				  <br />
+				  Jane Doe: +91 12345 67890
+			  </p>
+		  </div>
+	</div>
+	<div id="event8Modal" class="modal modal-fixed black-text">
+		<div class="row">
+			<ul class="tabs">
+				<li class="tab col s4"><a href="#aboutEvent8" class="teal-text">About</a></li>
+				<li class="tab col s4"><a href="#rulesEvent8" class="teal-text">Rules</a></li>
+				<li class="tab col s4"><a href="#contactEvent8" class="teal-text">Contact</a></li>
+				<div class="indicator teal" style="z-index:1"></div>
+			</ul>
+		</div>
+		<div id="aboutEvent8" class="col s12 modal-content">
+			  <h5>Event Name</h5>
+			  <p class="text-justify">
+				  Lorem ipsum dolor sit amet, mei quis soluta ut, ius ut autem deleniti. At oratio neglegentur qui, illum maluisset reprimique cum cu. Ius esse nostrum id, no omnis omittam mea. Erant maiorum te qui, qui labore mandamus id. Cum id nisl porro ponderum, vix eu suscipit reformidans, quo melius graecis epicurei ea. Qui eu latine erroribus, te causae conceptam vix.
+			  </p>
+		  </div>
+		<div id="rulesEvent8" class="col s12 modal-content">
+			  <h5>Rules</h5>
+			  <ol class="left-align">
+				  <li>Rule 1</li>
+				  <li>Rule 2</li>
+			  </ol>
+		  </div>
+		<div id="contactEvent7" class="col s12 modal-content">
+			  <h5>Contact</h5>
+			  <p class="left-align">
+				  John Doe: +91 12345 67890
+				  <br />
+				  Jane Doe: +91 12345 67890
+			  </p>
+		  </div>
+	</div>
+	<div id="event9Modal" class="modal modal-fixed black-text">
+		<div class="row">
+			<ul class="tabs">
+				<li class="tab col s4"><a href="#aboutEvent9" class="teal-text">About</a></li>
+				<li class="tab col s4"><a href="#rulesEvent9" class="teal-text">Rules</a></li>
+				<li class="tab col s4"><a href="#contactEvent9" class="teal-text">Contact</a></li>
+				<div class="indicator teal" style="z-index:1"></div>
+			</ul>
+		</div>
+		<div id="aboutEvent9" class="col s12 modal-content">
+			  <h5>Event Name</h5>
+			  <p class="text-justify">
+				  Lorem ipsum dolor sit amet, mei quis soluta ut, ius ut autem deleniti. At oratio neglegentur qui, illum maluisset reprimique cum cu. Ius esse nostrum id, no omnis omittam mea. Erant maiorum te qui, qui labore mandamus id. Cum id nisl porro ponderum, vix eu suscipit reformidans, quo melius graecis epicurei ea. Qui eu latine erroribus, te causae conceptam vix.
+			  </p>
+		  </div>
+		<div id="rulesEvent9" class="col s12 modal-content">
+			  <h5>Rules</h5>
+			  <ol class="left-align">
+				  <li>Rule 1</li>
+				  <li>Rule 2</li>
+			  </ol>
+		  </div>
+		  <div id="contactEvent9" class="col s12 modal-content">
+			  <h5>Contact</h5>
+			  <p class="left-align">
+				  John Doe: +91 12345 67890
+				  <br />
+				  Jane Doe: +91 12345 67890
+			  </p>
+		  </div>
+	</div>
+	<!--End of Solo Events Section
+	================================================== -->
+
+
+
+
+
+
+
+	
+	
+
+	
+	
