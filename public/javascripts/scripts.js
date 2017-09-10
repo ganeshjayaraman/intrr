@@ -96,68 +96,56 @@ $(document).ready(function(){
 
     $("#reg-form").validate({
         rules: {
-            fname: {
+            user[name]: {
                 required: true,
                 minlength: 2
             },
-            lname: {
-                required: true,
-                minlength: 2
-            },
-            mobile_num: {
+            user[phone]: {
                 required: true,
                 minlength: 10,
-                maxlength: 10
+                maxlength: 10,
+                number: true
             },
-            col:{
+            user[college]:{
                 required:true,
-                minlength:4,
-                maxlength:15
+                minlength:4
             },
-            email: {
+            user[email]: {
                 required: true,
                 email:true
             },
-            mobile_num: {
-                required: true,
-                minlength: 10,
-                number: true
-            },
-            pass: {
+            user[password]: {
                 required: true,
                 minlength: 6
             },
-            confirm_pass: {
+            user[password_confirmation]: {
                 required: true,
                 minlength: 6,
                 equalTo: "#password"
             }
         },
         messages: {
-            fname: {
+            user[name]: {
                 required: "Please enter your first name.",
                 minlength: "You sure you're named with one letter?"
             },
-            lname: {
-                required: "Please enter your last name."
-            },
-            email: {
+            user[email]: {
                 required: "Please enter your email address.",
                 email: "Please enter a valid email address."
             },
-            col: {
+            user[college]: {
                 required: "Please enter your college name."
             },
-            mobile_num: {
+            user[phone]: {
                 required: "Please enter your phone number.",
                 number: "That isn't even a number!",
                 minlength: "That doesn't seem like a phone number to me. :/"
             },
-            pass: {
+            user[password]: {
                 required: "Please enter a password.",
                 minlength: "Password must be atleast 6 characters."
             },
-            confirm_pass: {
+            user[password_confirmation]: {
                 required: "Please confirm your password.",
                 minlength: "Password must be atleast 6 characters.",
                 equalTo: "Password does not match."
