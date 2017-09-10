@@ -10,6 +10,8 @@ class CreateEvents < ActiveRecord::Migration[5.1]
       t.boolean :e7
       t.boolean :e8
       t.boolean :e9
+      t.boolean :e10
+      t.boolean :e11      
 
       t.references :user, index: true
 

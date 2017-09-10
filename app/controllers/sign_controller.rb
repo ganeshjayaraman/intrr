@@ -96,7 +96,7 @@ class SignController < ApplicationController
 
   ##Initially false for all events
   def event_create_params
-    {e1: 0,e2: 0,e3: 0,e4: 0,e5: 0,e6: 0,e7: 0,e8: 0,e9: 0}
+    {e1: 0,e2: 0,e3: 0,e4: 0,e5: 0,e6: 0,e7: 0,e8: 0,e9: 0,e10: 0,e11: 0}
   end
 
   ### Helper Methods###
