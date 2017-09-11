@@ -12,11 +12,10 @@ Latest Integration:
 	================================================== -->
 	<section data-role="section" class="center-align" id="home">
 	<div class="container">
-		<div class="logo">
-			<div class="logo__card">
-				<div class="layer">
-					<img id="interruptLogo" src="images/robo1.png" alt="image"/>
-				</div>
+
+		<div class="row">
+		<div class="col s12 m12 l12">
+		<img id="interruptLogo" src="images/robo1.png" alt="image"/>
 			</div>
 		</div>
 		<div class="row">
@@ -34,15 +33,11 @@ Latest Integration:
 				
 				<% if !logged_in? %>
 				<div class="row">
-					<div class="col s8 offset-s2 m4 offset-m4 waves-effect waves-light btn modal-trigger white-text matrix-green-2">
-					<a class="modal-trigger white-text" href="#signup_signin">Sign Up/Sign In</a>
-					</div>
+					<a class="col s8 offset-s2 m4 offset-m4 waves-effect waves-light btn modal-trigger white-text matrix-green-2" href="#signup_signin">Sign Up/Sign In</a>
 				</div>
 				<% else %>
 				<div class="row">
-					<div class="col s8 offset-s2 m4 offset-m4 waves-effect waves-light btn modal-trigger white-text matrix-green-2">
-					<a class="modal-trigger white-text" href="#register">Events Registration</a>
-					</div>
+					<a class="col s8 offset-s2 m4 offset-m4 waves-effect waves-light btn modal-trigger white-text matrix-green-2" href="#register">Event Registration</a>
 				</div>
 					<% end %>
 				
@@ -110,7 +105,7 @@ Latest Integration:
 						</a>
 						<a class="modal-trigger" href="#event3Modal">
 							<div class="col s12 m4 event item">
-								<h5>Code-o-poly</h5>
+								<h5>First Strike</h5>
 							</div>
 						</a>
 					</div>
@@ -178,7 +173,8 @@ Latest Integration:
 				<div class="col s10 offset-s1 page text-center">
 					<h1 class="fromLeft">Team - Interrupt '17</h1>
 					<p class="fromRight text-justify">
-						Quick brown dogs jump over the lazy fox. The jay, pig, fox, zebra, and my wolves quack! Blowzy red vixens fight for a quick jump. Joaquin Phoenix was gazed by MTV for luck. A wizard’s job is to vex chumps quickly in fog. Watch "Jeopardy! ", Alex Trebek"s fun TV quiz game. Woven silk pyjamas exchanged for blue quartz. Brawny gods just flocked up to quiz and vex him. Adjusting quiver and bow, Zompyc[1] killed the fox. My faxed joke won a pager in the cable TV quiz show. Amazingly few discotheques provide jukeboxes. My girl wove six dozen plaid jackets before she quit. Six big devils from Japan quickly forgot how to waltz. Big July earthquakes confound zany experimental vow. Foxy parsons quiz and cajole the lovably dim wiki-girl.
+						We are excited to present to you our brain-child : Interrupt who we've nurtured and raised with care over the past few months.<br><br> The diversity of events we've got this year is testimony to the efforts we've put in.<br><br>
+                        Our team comprises of the entire Department of Computer Science and Engineering with students from all years helping out as organisers, designers, developers, creative thinkers and volunteers. We've also received immense support and help from the HoD, faculty and all supporting staff.
 					</p>
 					<p class="center-align">
 						<a class="btn-floating btn-large waves-effect waves-light green nav-btn" href="#contact"><i class="large material-icons">arrow_downward</i></a>
@@ -208,19 +204,19 @@ Latest Integration:
 							<div class="col s12">
 								<div class="row">
 									<div class="col s12 m3 text-center">
-										<p>
+										<p class="cen">
 											Chran Suresh: <br />+91 95001 32964 <br />
 											Arjun Aravind: <br />+91 89392 27284
 										</p>
 									</div>
 									<div class="col s12 m3 text-center">
-										<p>
+										<p class="cen">
 											Facebook: <br /><a href="https://www.facebook.com/svceinterrupt" id="fb" target="_blank">Interrupt 2K17</a> <br />
 											Email: <br /><a href="mailto:interrupt2k17@gmail.com" id="mailId" target="_blank">interrupt2k17@gmail.com</a>
 										</p>
 									</div>
 									<div class="col s12 m6 text-center">
-										<p>
+										<p class="cen">
 											Address: <br />
 											Post Bag #1, Pennalur, Sri Perumbudur <br />
 											Tamil Nadu, India <br />
@@ -267,38 +263,38 @@ Latest Integration:
 				<div class="row">
 					<div class="input-field col s12">
 						<i class="material-icons prefix black-text text-darken-2">person</i>
-						<input name="user[name]" id="first_name" type="text" class="validate" data-length="50" >
+						<input name="user[name]" id="first_name" type="text" class="validate" minlength="4" data-length="50" pattern="[a-z]*" title="Names generally have only alphabets" required>
 						<label for="first_name">Name</label>
 					</div>
 				</div>
 				<div class="row">
 					<div class="input-field col s12">
 						<i class="material-icons prefix black-text text-darken-2">school</i>
-						<input name="user[college]" id="college" type="text" class="validate" data-length="50">
+						<input name="user[college]" id="college" type="text" class="validate" minlength="3" data-length="50" pattern="[a-z]*" title="Colleges generally have only alphabets in their name" required>
 						<label for="college">College Name</label>
 					</div>
 				</div>
 				<div class="row">
 					<div class="input-field col s12 m6">
 						<i class="material-icons prefix black-text text-darken-2">email</i>
-						<input name="user[email]" id="email" type="email" class="validate" data-length="35">
+						<input name="user[email]" id="email" type="email" class="validate" data-length="35" required>
 						<label for="email">Email</label>
 					</div>
 					<div class="input-field col s12 m6">
 						<i class="material-icons prefix black-text text-darken-2">local_phone</i>
-						<input name="user[phone]" id="phone" type="tel" data-length="10">
+						<input name="user[phone]" id="phone" type="tel" minlength="10" pattern="[0-9]{10}" data-length="10" maxlength="10" title="Should be a mobile number." required>
 						<label for="phone">Phone Number</label>
 					</div>
 				</div>
 				<div class="row">
 					<div class="input-field col s12 m6">
 						<i class="material-icons prefix black-text text-darken-2">lock</i>
-						<input name="user[password]" id="password" type="password" class="validate"  data-length="16">
+						<input name="user[password]" id="password" type="password" class="validate" minlength="6" data-length="16" required>
 						<label for="phone">Password</label>
 					</div>
 					<div class="input-field col s12 m6">
 						<i class="material-icons prefix black-text text-darken-2">lock</i>
-						<input name="user[password_confirmation]" id="password_confirm" type="password" class="validate"  data-length="16">
+						<input name="user[password_confirmation]" id="password_confirm" minlength="6" type="password" class="validate"  data-length="16" required>
 						<label for="phone">Confirm Password</label>
 					</div>
 				</div>
@@ -770,14 +766,15 @@ Latest Integration:
 	<div id="event1Modal" class="modal modal-fixed black-text">
 		<div class="row">
 			<ul class="tabs">
-				<li class="tab col s6"><a href="#aboutEvent1" class="teal-text">About</a></li>
-				<li class="tab col s6"><a href="#rulesEvent1" class="teal-text">Rules</a></li>
+				<li class="tab col s4"><a href="#aboutEvent1" class="teal-text">About</a></li>
+				<li class="tab col s4"><a href="#rulesEvent1" class="teal-text">Rules</a></li>
+				<li class="tab col s4"><a href="#contactEvent1" class="teal-text">Contact</a></li>				
 				<div class="indicator teal" style="z-index:1"></div>
 			</ul>
 		</div>
 		<div id="aboutEvent1" class="col s12 modal-content">
 			<h5>Battlecode</h5>
-			<img src="images/code ninja.png" alt="" alt="" class="img-center" alt="" width="100px" height="100px">
+			<img src="images/code ninja.png" alt="" class="img-center" alt="" width="100px" height="100px">
 			<p class="text-justify">
 				Take up arms (and your keyboards) to fight an all-out war against teams to rise as the Champion of the land of JAVArosa.
 			</p>
@@ -795,6 +792,13 @@ Latest Integration:
 				<li>Organisers decision is final.</li>
 			</ol>
 		</div>
+		<div id="contactEvent1" class="col s12 modal-content">
+			<h5>Contact</h5>
+			<p class="text-justify">
+				Mr. Pravesh 
+				Phone : +919566072778
+			</p>
+		</div>		
 		<div class="modal-footer">
 			<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Okay</a>
 		</div>
@@ -802,14 +806,15 @@ Latest Integration:
 	<div id="event2Modal" class="modal modal-fixed black-text">
 		<div class="row">
 			<ul class="tabs">
-				<li class="tab col s6"><a href="#aboutEvent2" class="teal-text">About</a></li>
-				<li class="tab col s6"><a href="#rulesEvent2" class="teal-text">Rules</a></li>
+				<li class="tab col s4"><a href="#aboutEvent2" class="teal-text">About</a></li>
+				<li class="tab col s4"><a href="#rulesEvent2" class="teal-text">Rules</a></li>
+				<li class="tab col s4"><a href="#contactEvent2" class="teal-text">Contact</a></li>				
 				<div class="indicator teal" style="z-index:1"></div>
 			</ul>
 		</div>
 		<div id="aboutEvent2" class="col s12 modal-content">
 			<h5>Flip A Table!</h5>
-			<img src="images/flip a table.png"  alt="" class="img-center" alt="" width="100px" height="100px">
+			<img src="images/flip a table.png"  alt="" class="img-center"  width="100px" height="100px">
 			<p class="text-justify">
 				A SQL query walks into a bar and sees two tables. He walked up to them and says 'Can I join you?'
 			</p>
@@ -827,6 +832,13 @@ Latest Integration:
 				<li>Organisers decision is final.</li>
 			</ol>
 		</div>
+		<div id="contactEvent2" class="col s12 modal-content">
+			<h5>Contact</h5>
+			<p class="text-justify">
+				Mr. Akhil Menon<br> 
+				Phone : +918122886537
+			</p>
+		</div>			
 		<div class="modal-footer">
 			<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Okay</a>
 		</div>
@@ -834,16 +846,17 @@ Latest Integration:
 	<div id="event3Modal" class="modal modal-fixed black-text">
 		<div class="row">
 			<ul class="tabs">
-				<li class="tab col s6"><a href="#aboutEvent3" class="teal-text">About</a></li>
-				<li class="tab col s6"><a href="#rulesEvent3" class="teal-text">Rules</a></li>
+				<li class="tab col s4"><a href="#aboutEvent3" class="teal-text">About</a></li>
+				<li class="tab col s4"><a href="#rulesEvent3" class="teal-text">Rules</a></li>
+				<li class="tab col s4"><a href="#contactEvent3" class="teal-text">Contact</a></li>				
 				<div class="indicator teal" style="z-index:1"></div>
 			</ul>
 		</div>
 		<div id="aboutEvent3" class="col s12 modal-content">
-			<h5>Code-o-poly</h5>
-			<img src="images/codopoly.jpg" alt="" alt="" class="img-center" alt="" width="100px" height="100px">
+			<h5>First Strike</h5>
+			<img src="images/codopoly.svg" alt=""  class="img-center"  width="100px" height="100px">
 			<p class="text-justify">
-				Were you born to code? Then grab two of your friends and head on down to Code-o-poly!
+				Were you born to code? Then grab two of your friends and head on down to First Strike!
 			</p>
 			<p>
 				Players who make it through our ultimate C skills test get into a round of Code Bingo, where CS meets Tumbola.
@@ -859,6 +872,13 @@ Latest Integration:
 				<li>Organizers decision is final</li>
 			</ol>
 		</div>
+		<div id="contactEvent3" class="col s12 modal-content">
+			<h5>Contact</h5>
+			<p class="text-justify">
+				Mr. Murali <br> 
+				Phone : +917845123400
+			</p>
+		</div>		
 		<div class="modal-footer">
 			<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Okay</a>
 		</div>
@@ -866,14 +886,15 @@ Latest Integration:
 	<div id="event4Modal" class="modal modal-fixed black-text">
 		<div class="row">
 			<ul class="tabs">
-				<li class="tab col s6"><a href="#aboutEvent4" class="teal-text">About</a></li>
-				<li class="tab col s6"><a href="#rulesEvent4" class="teal-text">Rules</a></li>
+				<li class="tab col s4"><a href="#aboutEvent4" class="teal-text">About</a></li>
+				<li class="tab col s4"><a href="#rulesEvent4" class="teal-text">Rules</a></li>
+				<li class="tab col s4"><a href="#contactEvent4" class="teal-text">Contact</a></li>				
 				<div class="indicator teal" style="z-index:1"></div>
 			</ul>
 		</div>
 		<div id="aboutEvent4" class="col s12 modal-content">
 			<h5>Breaking the Logician's Code</h5>
-			<img src="images/door2.jpg" alt="" class="img-center" alt="" width="100px" height="100px">
+			<img src="images/door2.jpg" alt="" class="img-center"  width="100px" height="100px">
 			<p class="text-justify">
 				Imagination takes you everywhere" - Albert Einstein.
 			</p>
@@ -892,6 +913,13 @@ Latest Integration:
 				<li>Organisers decision is final.</li>
 			</ol>
 		</div>
+		<div id="contactEvent4" class="col s12 modal-content">
+			<h5>Contact</h5>
+			<p class="text-justify">
+				Mr. Gurudutt<br> 
+				Phone : +919789929425
+			</p>
+		</div>		
 		<div class="modal-footer">
 			<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Okay</a>
 		</div>
@@ -899,14 +927,15 @@ Latest Integration:
 	<div id="event5Modal" class="modal modal-fixed black-text">
 		<div class="row">
 			<ul class="tabs">
-				<li class="tab col s6"><a href="#aboutEvent5" class="teal-text">About</a></li>
-				<li class="tab col s6"><a href="#rulesEvent5" class="teal-text">Rules</a></li>
+				<li class="tab col s4"><a href="#aboutEvent5" class="teal-text">About</a></li>
+				<li class="tab col s4"><a href="#rulesEvent5" class="teal-text">Rules</a></li>
+				<li class="tab col s4"><a href="#contactEvent5" class="teal-text">Contact</a></li>				
 				<div class="indicator teal" style="z-index:1"></div>
 			</ul>
 		</div>
 		<div id="aboutEvent5" class="col s12 modal-content">
 			<h5>Presentation Park</h5>
-			<img src="images/paper presentation.png" alt="" class="img-center" alt="" width="100px" height="100px">
+			<img src="images/paper presentation.png" class="img-center" alt="" width="100px" height="100px">
 			<p class="text-justify">
 				Are you a visionary keen on computer science? Then this event is the perfect platform for you to exhibit your knowledge. You are required to choose and present a paper on any one of the given topics.
 			</p>
@@ -925,6 +954,13 @@ Latest Integration:
 				<li>Judge's decision is final.</li>
 			</ol>
 		</div>
+		<div id="contactEvent5" class="col s12 modal-content">
+			<h5>Contact</h5>
+			<p class="text-justify">
+				Mr. Chran S <br> 
+				Phone : +919500132964
+			</p>
+		</div>		
 		<div class="modal-footer">
 			<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Okay</a>
 		</div>
@@ -932,8 +968,9 @@ Latest Integration:
 	<div id="event6Modal" class="modal modal-fixed black-text">
 		<div class="row">
 			<ul class="tabs">
-				<li class="tab col s6"><a href="#aboutEvent6" class="teal-text">About</a></li>
-				<li class="tab col s6"><a href="#rulesEvent6" class="teal-text">Rules</a></li>
+				<li class="tab col s4"><a href="#aboutEvent6" class="teal-text">About</a></li>
+				<li class="tab col s4"><a href="#rulesEvent6" class="teal-text">Rules</a></li>
+				<li class="tab col s4"><a href="#contactEvent6" class="teal-text">Contact</a></li>				
 				<div class="indicator teal" style="z-index:1"></div>
 			</ul>
 		</div>
@@ -958,6 +995,13 @@ Latest Integration:
 				<li>Quiz master's decision is final.</li>
 			</ol>
 		</div>
+		<div id="contactEvent6" class="col s12 modal-content">
+			<h5>Contact</h5>
+			<p class="text-justify">
+				Mr. Akash- <br> 
+				Phone : +919962754468
+			</p>
+		</div>		
 		<div class="modal-footer">
 			<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Okay</a>
 		</div>
@@ -965,8 +1009,9 @@ Latest Integration:
 	<div id="event7Modal" class="modal modal-fixed black-text">
 		<div class="row">
 			<ul class="tabs">
-				<li class="tab col s6"><a href="#aboutEvent7" class="teal-text">About</a></li>
-				<li class="tab col s6"><a href="#rulesEvent7" class="teal-text">Rules</a></li>
+				<li class="tab col s4"><a href="#aboutEvent7" class="teal-text">About</a></li>
+				<li class="tab col s4"><a href="#rulesEvent7" class="teal-text">Rules</a></li>
+				<li class="tab col s4"><a href="#contactEvent7" class="teal-text">Contact</a></li>				
 				<div class="indicator teal" style="z-index:1"></div>
 			</ul>
 		</div>
@@ -983,6 +1028,13 @@ Latest Integration:
 				<li>Will be told on spot.</li>
 			</ol>
 		</div>
+		<div id="contactEvent7" class="col s12 modal-content">
+			<h5>Contact</h5>
+			<p class="text-justify">
+				Mr.Shivaram<br> 
+				Phone : +919789689078
+			</p>
+		</div>			
 		<div class="modal-footer">
 			<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Okay</a>
 		</div>
@@ -990,8 +1042,9 @@ Latest Integration:
 	<div id="event8Modal" class="modal modal-fixed black-text">
 		<div class="row">
 			<ul class="tabs">
-				<li class="tab col s6"><a href="#aboutEvent8" class="teal-text">About</a></li>
-				<li class="tab col s6"><a href="#rulesEvent8" class="teal-text">Rules</a></li>
+				<li class="tab col s4"><a href="#aboutEvent8" class="teal-text">About</a></li>
+				<li class="tab col s4"><a href="#rulesEvent8" class="teal-text">Rules</a></li>
+				<li class="tab col s4"><a href="#contactEvent8" class="teal-text">Contact</a></li>				
 				<div class="indicator teal" style="z-index:1"></div>
 			</ul>
 		</div>
@@ -1015,6 +1068,13 @@ Latest Integration:
 				<li>The organisers decision is final.</li>
 			</ol>
 		</div>
+		<div id="contactEvent8" class="col s12 modal-content">
+			<h5>Contact</h5>
+			<p class="text-justify">
+				Mr. Parvath<br> 
+				Phone : +919962663395
+			</p>
+		</div>		
 		<div class="modal-footer">
 			<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Okay</a>
 		</div>
@@ -1022,8 +1082,9 @@ Latest Integration:
 	<div id="event9Modal" class="modal modal-fixed black-text">
 		<div class="row">
 			<ul class="tabs">
-				<li class="tab col s6"><a href="#aboutEvent9" class="teal-text">About</a></li>
-				<li class="tab col s6"><a href="#rulesEvent9" class="teal-text">Rules</a></li>
+				<li class="tab col s4"><a href="#aboutEvent9" class="teal-text">About</a></li>
+				<li class="tab col s4"><a href="#rulesEvent9" class="teal-text">Rules</a></li>
+				<li class="tab col s4"><a href="#contactEvent9" class="teal-text">Contact</a></li>				
 				<div class="indicator teal" style="z-index:1"></div>
 			</ul>
 		</div>
@@ -1046,6 +1107,13 @@ Latest Integration:
 				<li>Plagiarism of code will be viewed strictly.</li>
 			</ol>
 		</div>
+		<div id="contactEvent9" class="col s12 modal-content">
+			<h5>Contact</h5>
+			<p class="text-justify">
+				Mr. Chran S<br> 
+				Phone : +919500132964
+			</p>
+		</div>		
 		<div class="modal-footer">
 			<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Okay</a>
 		</div>
@@ -1053,8 +1121,9 @@ Latest Integration:
 	<div id="event10Modal" class="modal modal-fixed black-text">
 		<div class="row">
 			<ul class="tabs">
-				<li class="tab col s6"><a href="#aboutEvent10" class="teal-text">About</a></li>
-				<li class="tab col s6"><a href="#rulesEvent10" class="teal-text">Rules</a></li>
+				<li class="tab col s4"><a href="#aboutEvent10" class="teal-text">About</a></li>
+				<li class="tab col s4"><a href="#rulesEvent10" class="teal-text">Rules</a></li>
+				<li class="tab col s4"><a href="#contactEvent10" class="teal-text">Contacts</a></li>				
 				<div class="indicator teal" style="z-index:1"></div>
 			</ul>
 		</div>
@@ -1078,6 +1147,13 @@ Latest Integration:
 				<li>Certificate of participation will not be awarded for this event</li>
 			</ol>
 		</div>
+		<div id="contactEvent10" class="col s12 modal-content">
+			<h5>Contact</h5>
+			<p class="text-justify">
+				Mr. Tharoon <br> 
+				Phone : +917358477130
+			</p>
+		</div>			
 		<div class="modal-footer">
 			<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Okay</a>
 		</div>
@@ -1085,8 +1161,9 @@ Latest Integration:
 	<div id="event11Modal" class="modal modal-fixed black-text">
 		<div class="row">
 			<ul class="tabs">
-				<li class="tab col s6"><a href="#aboutEvent11" class="teal-text">About</a></li>
-				<li class="tab col s6"><a href="#rulesEvent11" class="teal-text">Rules</a></li>
+				<li class="tab col s4"><a href="#aboutEvent11" class="teal-text">About</a></li>
+				<li class="tab col s4"><a href="#rulesEvent11" class="teal-text">Rules</a></li>
+				<li class="tab col s4"><a href="#contactEvent11" class="teal-text">Contact</a></li>				
 				<div class="indicator teal" style="z-index:1"></div>
 			</ul>
 		</div>
@@ -1107,7 +1184,7 @@ Latest Integration:
 				<li>Robots</li>
 				<li>Gadgets</li>
 			</ul>
-		</div>
+		</div>		
 		<div id="rulesEvent11" class="col s12 modal-content">
 			<h5>Rules</h5>
 			<ol class="left-align">
@@ -1115,6 +1192,13 @@ Latest Integration:
 				<li>Winner will be selected based on the number of likes and the maximum relevance to the theme provided.</li>
 			</ol>
 		</div>
+		<div id="contactEvent11" class="col s12 modal-content">
+			<h5>Contact</h5>
+			<p class="text-justify">
+				Mr. Adhish <br> 
+				Phone : +919786799015
+			</p>
+		</div>		
 		<div class="modal-footer">
 			<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Okay</a>
 		</div>

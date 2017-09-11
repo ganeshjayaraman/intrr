@@ -1,4 +1,5 @@
 class SignController < ApplicationController
+
   ##sign IN 
   #up-new,in-new are not required.
   def in_new
@@ -69,7 +70,7 @@ class SignController < ApplicationController
   			session[:user_id] = User.find_by(email: sign_up_params[:email]).id
   			redirect_to root_path#sign_up_confirm_path
   		else
-  			flash[:error] = "Please fill form properly"
+  			flash[:error] = "Please fill form properly, Passwords might may not have matched"
   			redirect_to root_path
   		end
   	end
@@ -86,7 +87,7 @@ class SignController < ApplicationController
   private
   
   def sign_up_params
-  	params.require(:user).permit(:email,:password,:password_confirmation,:name,:phone,:college)
+  	params.require(:user).permit(:utf8,:authenticity_token,:email,:password,:password_confirmation,:name,:phone,:college)
   end  	
 
   #not used

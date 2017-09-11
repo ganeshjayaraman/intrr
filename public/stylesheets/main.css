@@ -405,8 +405,12 @@ body {
 	color: #FFFFFF;
 }
 
+.cen{
+	text-align: center;
+}
+
 #interruptLogo{
-	width: 135%;
+	width: 40%;
 }
 
 #fb{
