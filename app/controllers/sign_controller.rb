@@ -1,6 +1,11 @@
-class SignController < ApplicationController
 
-  ##sign IN 
+class SignController < ApplicationController
+skip_before_action :verify_authenticity_token
+protect_from_forgery with: :null_session
+#protect_from_forgery with: :null_session
+#_from_forgery with: :null_session
+
+ ##sign IN 
   #up-new,in-new are not required.
   def in_new
   	if session[:user_id] == nil
